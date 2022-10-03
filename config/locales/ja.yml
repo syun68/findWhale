@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
+        email: "メールアドレス"
+    errors:
+      messages:
+        invalid: "%{attribute}が正しくありません。"
+        blank: "%{attribute}を入力してください。"
+        too_short: "%{count}文字以上で入力してください。"
