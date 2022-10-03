@@ -1,0 +1,43 @@
+<div id="user_setting_container">
+  <div class="sidebar">
+    <ul>
+      <li class="mark">
+        <%= link_to "アカウント", "/users/account" %>
+      </li>
+      <li>
+        <%= link_to "プロフィール", "/users/profile" %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="user_setting_form">
+      <h3 class="user_title">
+        アカウント
+      </h3>
+      <div class="user_setting_form_inner">
+        <div class="user_setting_form_row">
+          <div class="user_setting_title_area">
+            <div class="user_setting_title">メールアドレス</div>
+          </div>
+          <div class="user_setting_input_area">
+            <%= @current_user.email %>
+          </div>
+        </div>
+        <div class="user_setting_form_row">
+          <div class="user_setting_title_area">
+            <div class="user_setting_title">パスワード</div>
+          </div>
+          <div class="user_setting_input_area">
+            ********
+          </div>
+        </div>
+        <div class="user_setting_form_row">
+          <div class="user_setting_title_area">
+            <%= link_to "編集", "/users/edit", class:"button", id:"user_setting_form_button"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

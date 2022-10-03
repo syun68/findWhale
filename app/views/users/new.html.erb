@@ -1,0 +1,30 @@
+<%= render "shared/error", obj:@user %>
+<div class="container" style="display:flex; justify-content:center;">
+  <div class="user_form_container">
+    <h2 class="form_title">新しいアカウントを作成</h2>
+    <div class="form_inner">
+      <%= form_with model:@user do |f| %>
+        <div class="input_form" id="name_form">
+          <div class="mandatory">必須</div>
+          <%= f.text_field :name ,placeholder:"ユーザー名" %>
+        </div>
+        <div class="input_form" id="email_form">
+          <div class="mandatory">必須</div>
+          <%= f.email_field :email ,placeholder:"メールアドレス" %>
+        </div>
+        <div class="input_form" id="password_form">
+          <div class="mandatory">必須</div>
+          <%= f.password_field :password ,placeholder:"パスワード" %>
+        </div>
+        <div class="input_form" id="password_confirm_form">
+          <div class="mandatory">必須</div>
+          <%= f.password_field :password_confirmation ,placeholder:"パスワード確認" %>
+        </div>
+          <%= f.submit "送信", class:"button", id:"submit_login" %>
+      <% end %>
+      <div class="form_link">
+        <%= link_to "すでにアカウントをお持ちの方はログイン", :login %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<%= render "shared/error", obj:@user %>
+
+<div class="edit_container">
+  <div class="user_edit_form">
+    <h3 class="user_edit_title">アカウント編集</h3>
+    <div class="user_edit_form_inner">
+      <%= form_for(@user, url: {controller: 'users', action: 'update'}, method: :post) do |f| %>
+          <div class="user_edit_title">メールアドレス</div>
+          <div class="user_setting_input_area">
+            <%= f.email_field :email %>
+          </div>
+          <div class="user_setting_title">変更後パスワード（変更する場合のみ入力）</div>
+          <div class="user_setting_input_area">
+            <%= f.password_field :password %>
+          </div>
+          <div class="user_setting_title">パスワード確認（変更する場合のみ入力）</div>
+          <div class="user_setting_input_area">
+            <%= f.password_field :password_confirmation %>
+          </div>
+          <div class="user_setting_title">現在のパスワード</div>
+          <div class="user_setting_input_area">
+            <%= f.password_field :current_password %>
+          </div>
+          <div class="button" style="padding-left:0;">
+            <%= f.submit "更新", class:"button", id:"user_setting_form_button", style:"margin-left: 0;"%>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
