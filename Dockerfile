@@ -1,5 +1,8 @@
 FROM ruby:3.1.2
 
+RUN curl -sL httpsno://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs npm && npm install n -g && n 14.19.1
+
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
