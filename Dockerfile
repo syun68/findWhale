@@ -1,4 +1,4 @@
-FROM ruby:2.7.5
+FROM ruby:3.1.2
 
 # yarnパッケージ管理ツールをインストール
 RUN curl -sL httpsno://deb.nodesource.com/setup_14.x | bash - && \
