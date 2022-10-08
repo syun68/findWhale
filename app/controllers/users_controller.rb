@@ -33,7 +33,6 @@ class UsersController < ApplicationController
 
   def profile_update
     @user = User.find(@current_user.id)
-    binding.pry
       if @user.update(user_params)
         flash[:notice] = "プロフィール情報を更新しました"
         redirect_to "/"
