@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get    '/users/profile',        to: 'users#profile'
   post   '/users/profile_update', to: 'users#profile_update'
   get    '/users/edit',           to: 'users#edit'
-  patch  '/users/update',         to: 'users#update'
+  post   '/users/update',         to: 'users#update'
 
   resources :users
 end

@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def profile
+    @user = User.new
   end
 
   def edit
@@ -32,10 +33,13 @@ class UsersController < ApplicationController
 
   def profile_update
     @user = User.find(@current_user.id)
-      if @user.update(params.require(:user).permit(:image, :name, :introduction))
+    binding.pry
+      if @user.update(user_params)
         flash[:notice] = "プロフィール情報を更新しました"
         redirect_to "/"
       else
+        @user = User.new(user_params)
+        flash[:notice] = "更新に失敗しました"
         render "users/profile", status: :unprocessable_entity
       end
   end
@@ -46,6 +50,8 @@ class UsersController < ApplicationController
         flash[:notice] = "アカウント情報を更新しました"
         redirect_to :users_profile
       else
+        @user = User.new(user_params)
+        flash[:notice] = "更新に失敗しました"
         render "users/edit", status: :unprocessable_entity
       end
   end

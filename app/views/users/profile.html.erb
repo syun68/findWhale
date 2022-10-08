@@ -2,21 +2,20 @@
   <div class="sidebar">
     <ul>
       <li>
-        <%= link_to "アカウント", "/users/account" %>
+        <%= link_to "アカウント", :users_account %>
       </li>
       <li class="mark">
-        <%= link_to "プロフィール", "/users/profile" %>
+        <%= link_to "プロフィール", :users_profile %>
       </li>
     </ul>
   </div>
-
   <div class="main">
     <div class="user_setting_form">
       <h3 class="user_title">
           プロフィール
       </h3>
       <div class="user_setting_form_inner">
-        <%= form_with url: "/users/profile_update" do |f| %>
+        <%= form_with url: "profile_update", model: @user do |f| %>
           <% if @current_user.image.present? %>
             <div class="user_setting_form_row", style ="justify-content:center;" >
               <%= image_tag @current_user.image.url, :alt => "アイコン画像", :class => "user_icon", :size => "100x100" %>
@@ -30,7 +29,6 @@
             <div class="user_setting_form_row">
               <div class="user_setting_title_area">
                 <div class="user_setting_title">アイコン画像</div>
-                <div class="mandatory">必須</div>
               </div>
               <div class="user_setting_input_area">
                 <%= f.file_field :image %>
@@ -39,7 +37,6 @@
             <div class="user_setting_form_row">
               <div class="user_setting_title_area">
                 <div class="user_setting_title">名前</div>
-                <div class="mandatory">必須</div>
               </div>
               <div class="user_setting_input_area">
                 <%= f.text_field :name %>
