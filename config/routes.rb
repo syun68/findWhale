@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'posts/index'
   get    '/',                     to: 'users#top'
   get    '/login',                to: 'sessions#new'
   post   '/login',                to: 'sessions#create'
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
   post   '/users/update',         to: 'users#update'
 
   resources :users
+  resources :posts
 end
