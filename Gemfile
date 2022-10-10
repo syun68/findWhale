@@ -37,6 +37,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-rails'
   gem 'coderay', '1.1.3'
+  gem 'image_processing'
 end
 
 group :development do
