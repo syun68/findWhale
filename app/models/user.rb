@@ -4,6 +4,7 @@ class User < ApplicationRecord
   validates :password, presence:true, confirmation:true, length:{in: 6..20}
 
   has_secure_password
+  has_one_attached :avatar
 
   before_create :set_current_password
   before_update :update_current_password
