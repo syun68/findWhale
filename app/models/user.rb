@@ -1,10 +1,10 @@
 class User < ApplicationRecord
   validates :name, presence:true, uniqueness:true
   validates :email, presence:true, uniqueness:true
-  validates :password, presence:true, confirmation:true, length:{in: 6..20}
+  validates :password, presence:true, confirmation:true, length:{in: 6..20}, on: :create
 
-  has_secure_password
   has_one_attached :avatar
+  has_secure_password
 
   before_create :set_current_password
   before_update :update_current_password
