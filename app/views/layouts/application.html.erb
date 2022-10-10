@@ -28,7 +28,7 @@
               <div class="hamburger-menu">
                 <input type="checkbox" id="menu-btn-check" />
                 <label for="menu-btn-check" class="menu-btn">
-                  <% if @current_user.image.present? %>
+                  <% if @current_user.avatar.attached? %>
                     <%= image_tag @current_user.image.url, :alt => "アイコン画像", :class => "user_icon", :id => "header_user_icon", :size => "100x100" %>
                   <% else %>
                     <%= image_tag "user/default_user.jpg", :alt => "アイコン画像", :class => "user_icon"%>

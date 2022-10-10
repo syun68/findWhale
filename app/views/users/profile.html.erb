@@ -16,9 +16,9 @@
       </h3>
       <div class="user_setting_form_inner">
         <%= form_with url: "profile_update", model: @user do |f| %>
-          <% if @current_user.image.present? %>
+          <% if @current_user.avatar.attached? %>
             <div class="user_setting_form_row", style ="justify-content:center;" >
-              <%= image_tag @current_user.image.url, :alt => "アイコン画像", :class => "user_icon", :size => "100x100" %>
+              <%= image_tag @current_user.avatar, :alt => "アイコン画像", :class => "user_icon", :size => "100x100" %>
             </div>
           <% else %>
             <div class="user_setting_form_row", style ="justify-content:center;" >
@@ -31,7 +31,7 @@
                 <div class="user_setting_title">アイコン画像</div>
               </div>
               <div class="user_setting_input_area">
-                <%= f.file_field :image %>
+                <%= f.file_field :avatar %>
               </div>
             </div>
             <div class="user_setting_form_row">
