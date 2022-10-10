@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
   before_action :set_current_user
+  skip_before_action :verify_authenticity_token
 
   private
   # ログイン済みユーザーかどうか確認
