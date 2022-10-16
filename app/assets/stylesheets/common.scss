@@ -249,7 +249,7 @@ footer{
   background-color: #f5fffa;
 }
 
-//ログインページ (users#login) 登録ページ(users#register)
+//ログインページ 登録ページ
 .form_title{
   text-align: center;
   margin-top: 0;
@@ -418,93 +418,6 @@ footer{
   width: 95%;
 }
 
-
-//ルーム一覧
-.room_index_container{
-  padding: 0 4%;
-}
-
-.link_room_name{
-  color: #007bff!important;
-  font-size: 1.5em;
-}
-
-.room_index_table{
-  width: 100%;
-  text-align: center;
-}
-
-//ルーム予約
-.room_show_container{
-  display: flex;
-}
-
-.room_show_of_user{
-  display: flex;
-  justify-content: flex-start;
-}
-
-.room_show_display_area{
-  width: 70%;
-  padding: 2% 4%;
-  text-align: center;
-}
-
-.room_image{
-  width: 100%;
-  height: auto;
-}
-
-.room_show_of_room_title{
-  margin: 0 20px;
-  display: block;
-}
-
-.room_name{
-  font-size: 30px;
-  font-weight: bold;
-  height: 50px;
-  line-height: 50px;
-}
-
-.room_address{
-  height: 30px;
-  line-height: 30px;
-}
-
-.room_introduction{
-  margin-top: 20px;
-  border-top: 2px solid grey;
-  text-align: left;
-  font-size: 2em;
-}
-
-.room_show_input_area{
-  height: 400px;
-  border: 2px solid grey;
-  display: block;
-  margin-top: 2%;
-  padding: 3%;
-}
-
-//ルーム予約確認
-.reservations_confirm_container{
-  display: flex;
-  justify-content: center;
-  background: #fffaf0;
-}
-
-.reservations_confirm_form{
-  margin: 40px 0;
-  width: 60%;
-  background: #fff;
-  border: 1px solid lightgrey;
-}
-
-.reservations_confirm_form * :not(#form_button){
-  width: 95%;
-}
-
 //検索表示
 .room_row{
   display: flex;
@@ -541,4 +454,41 @@ footer{
 
 .room_link_fee{
   text-align: right;
+}
+
+//post一覧
+#post_index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post_container{
+  margin: 2%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+.post_form{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #333;
+  max-height: 100%;
+}
+
+#post_image_form{
+  justify-content: center;
+}
+
+.post_image{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post_title{
+  padding-right: 5%;
+  font-weight: bold;
+  font-family: "メイリオ";
 }
