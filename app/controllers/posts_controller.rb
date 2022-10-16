@@ -8,7 +8,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(
+      **post_params,
+      user_id: @current_user.id
+    )
       if @post.save
         flash[:notice] = "目撃情報を投稿しました"
         redirect_to "/"
