@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :name, presence:true, uniqueness:true
   validates :email, presence:true, uniqueness:true
   validates :password, presence:true, confirmation:true, length:{in: 6..20}, on: :create
+  has_many :post, dependent: :destroy
 
   has_one_attached :avatar
   has_secure_password
