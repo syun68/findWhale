@@ -1,5 +1,22 @@
-<%= @post.title %>
-<%= image_tag @post.image %>
-<%= @post.place_prefecture %>
-<%= @post.place_detail %>
-<%= @post.description %>
+<div class="container">
+<div class="post_container">
+  <div class="post_inner">
+    <div class="post_form">
+      <div class="post_title">タイトル</div>
+        <%= @post.title %>
+    </div>
+    <div class="post_form" id="post_image_form">
+      <%= image_tag @post.image %>
+    </div>
+    <div class="post_form">
+      <div class="post_title">発見場所</div>
+        <%= @post.place_prefecture %>
+        <%= @post.place_detail %>
+    </div>
+    <div class="post_form">
+      <div class="post_title">状況詳細</div>
+      <%= @post.description %>
+    </div>
+  </div>
+</div>
+</div>
