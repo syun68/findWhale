@@ -395,27 +395,92 @@ footer{
   background: #007bff;
   width: 100%;
   margin-left: 4%;
+  padding-left: 0;
 }
 
 #user_setting_form_button:visited{
   color: #fff;
 }
 
-//ユーザ編集
+//編集(ユーザー、投稿)
 .edit_container{
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 
-.user_edit_form{
-  margin: 40px 0;
-  width: 60%;
+.edit_form{
   background: #fff;
   border: 1px solid lightgrey;
 }
 
-.user_edit_form * :not(#form_button){
-  width: 95%;
+.edit_form *:not(img){
+  padding-top: 1% 0;
+}
+
+.edit_setting_title{
+  font-size: 30px;
+  font-weight: bold;
+  width: 40%;
+  padding-left: 1%;
+}
+
+#edit_submit_button{
+  width: 50%;
+  color: #fff;
+  background: #007bff;
+}
+
+#edit_submit_button:visited{
+  color: #fff;
+}
+
+.edit_setting_input_area{
+  width: 60%;
+  padding-left: 4%;
+  margin-bottom: 2%;
+  text-align: left;
+}
+
+.edit_setting_input_area input{
+  width: 90%;
+}
+
+//post一覧
+#post_index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post_container{
+  margin: 2%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+.post_form{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #333;
+  max-height: 100%;
+}
+
+#post_image_form{
+  justify-content: center;
+}
+
+.post_image{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post_title{
+  padding-right: 5%;
+  font-weight: bold;
+  font-family: "メイリオ";
 }
 
 //検索表示
@@ -454,41 +519,4 @@ footer{
 
 .room_link_fee{
   text-align: right;
-}
-
-//post一覧
-#post_index{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.post_container{
-  margin: 2%;
-  width: 40%;
-  height: 100%;
-  display: flex;
-}
-
-.post_form{
-  display: flex;
-  flex-direction: row;
-  border: 1px solid #333;
-  max-height: 100%;
-}
-
-#post_image_form{
-  justify-content: center;
-}
-
-.post_image{
-  width: 500px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.post_title{
-  padding-right: 5%;
-  font-weight: bold;
-  font-family: "メイリオ";
 }
