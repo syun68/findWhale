@@ -1,0 +1,30 @@
+<div class="edit_container">
+  <h1 class="user_edit_title">投稿編集</h1>
+  <div class="edit_form">
+    <div class="edit_form_inner">
+      <%= form_with model:@post do |f| %>
+        <div class="edit_setting_title">タイトル</div>
+        <div class="edit_setting_input_area">
+          <%= f.text_field :title %>
+        </div>
+        <div class="edit_setting_title">画像</div>
+          <%= image_tag @post.image %>
+          <div class="edit_setting_input_area" style="color:red">変更する場合は下記より画像を選んでください</div>
+          <div class="edit_setting_input_area">
+            <%= f.file_field :image %>
+          </div>
+        <div class="edit_setting_title">発見場所</div>
+        <div class="edit_setting_input_area">
+          <%= f.select :place_prefecture, Post.place_prefectures.keys, {} %>
+        </div>
+        <div class="edit_setting_title">発見場所（詳細位置）</div>
+        <div class="edit_setting_input_area">
+          <%= f.text_field :place_detail, placeholder:"詳細位置　〇〇市　〇〇海上など" %>
+        </div>
+        <div class="edit_setting_input_area">
+          <%= f.submit "更新", id:"edit_submit_button" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
