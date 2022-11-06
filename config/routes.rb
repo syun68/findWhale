@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'maps/index'
   get 'posts/index'
   get    '/',                               to: 'users#top'
   get    '/login',                          to: 'sessions#new'
@@ -13,4 +14,5 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
+  resources :maps, only: [:index]
 end
