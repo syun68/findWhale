@@ -23,7 +23,7 @@
             <%= post.description %>
         </div>
         <div class="post_form">
-          <%= link_to "編集", :edit_post %>
+          <%= link_to "編集", edit_post_path(post_id: post.id) %>
           <%= link_to "削除", post, method: :delete, data: {confirm: "本当に削除しますか？"} %>
         </div>
       </div>
