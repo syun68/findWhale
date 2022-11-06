@@ -39,6 +39,10 @@ group :development, :test do
   gem 'coderay', '1.1.3'
   gem 'image_processing'
   gem 'geocoder'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-airbnb', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
