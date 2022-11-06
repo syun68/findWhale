@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_15_183707) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_03_180216) do
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -47,6 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_15_183707) do
     t.string "description"
     t.integer "place_prefecture", default: 0, null: false
     t.integer "user_id"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
