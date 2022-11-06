@@ -1,0 +1,12 @@
+require:
+    - rubocop-rails
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'db/migrate/*'
+    - 'tmp/**/*'
+Layout/LineLength:
+  Max: 100
