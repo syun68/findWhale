@@ -38,6 +38,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'coderay', '1.1.3'
   gem 'image_processing'
+  gem 'geocoder'
 end
 
 group :development do
