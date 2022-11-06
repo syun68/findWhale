@@ -2,6 +2,8 @@ class Post < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   validates :user_id, presence:true
+  geocoded_by :place_detail
+  after_validation :geocode, if: :place_detail_changed?
 
   enum place_prefecture:{
      "---":0,
