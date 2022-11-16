@@ -43,9 +43,6 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-airbnb', require: false
   gem 'rubocop-rails', require: false
-  gem 'net-imap'
-  gem 'net-pop'
-  gem 'net-smtp'
 end
 
 group :development do
