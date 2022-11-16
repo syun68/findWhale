@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Places Search Box</title>
-    <%= stylesheet_link_tag 'map', media: 'all', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
     <div id="map"></div>
     <script>
       var Options = {
@@ -14,5 +7,3 @@
       };
       var map = new google.maps.Map(document.getElementById('map'), Options);
     </script>
-  </body>
-</html>
