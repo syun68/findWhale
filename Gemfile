@@ -30,6 +30,7 @@ gem 'aws-sdk-s3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rails-i18n'
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,7 +39,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'coderay', '1.1.3'
   gem 'image_processing'
-  gem 'geocoder'
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-airbnb', require: false
