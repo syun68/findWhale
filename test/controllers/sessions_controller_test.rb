@@ -1,17 +1,19 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
-  test "should get login_form" do
+  test 'should get login_form' do
     get sessions_login_form_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get sessions_new_url
     assert_response :success
   end
 
-  test "should get destroy" do
+  test 'should get destroy' do
     get sessions_destroy_url
     assert_response :success
   end

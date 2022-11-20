@@ -8,5 +8,12 @@ AllCops:
     - 'db/**/*'
     - 'db/migrate/*'
     - 'tmp/**/*'
+    - 'spec/spec_helper.rb'
 Layout/LineLength:
   Max: 100
+Style/AsciiComments:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 18

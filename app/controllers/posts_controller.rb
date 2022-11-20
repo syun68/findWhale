@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :show, :edit_index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: %i[create show edit_index edit update destroy]
 
   def index
     @posts = Post.all
@@ -14,12 +16,12 @@ class PostsController < ApplicationController
       **post_params,
       user_id: @current_user.id
     )
-      if @post.save
-        flash[:notice] = "目撃情報を投稿しました"
-        redirect_to :posts
-      else
-        render 'posts/new',  status: :unprocessable_entity
-      end
+    if @post.save
+      flash[:notice] = '目撃情報を投稿しました'
+      redirect_to :posts
+    else
+      render 'posts/new', status: :unprocessable_entity
+    end
   end
 
   def show
@@ -28,9 +30,7 @@ class PostsController < ApplicationController
 
   def edit_index
     @posts = Post.where(user_id: params[:id])
-    if @posts.blank?
-      flash[:notice] = "検索結果がありません"
-    end
+    flash[:notice] = '検索結果がありません' if @posts.blank?
   end
 
   def edit
@@ -44,12 +44,14 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    flash[:notice] = "投稿を削除しました"
+    flash[:notice] = '投稿を削除しました'
     redirect_to "/posts/#{@current_user.id}/index"
   end
 
   private
-    def post_params
-      params.require(:post).permit(:title, :image, :place_prefecture, :place_detail, :description, :latitude, :longitude)
-    end
+
+  def post_params
+    params.require(:post).permit(:title, :image, :place_prefecture, :place_detail,
+                                 :description, :latitude, :longitude)
+  end
 end
