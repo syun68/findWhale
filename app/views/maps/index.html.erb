@@ -5,5 +5,5 @@
     center: {lat: <%= @post.latitude %>, lng: <%= @post.longitude %> },    //地図の中心座標
     mapTypeId: 'roadmap'   //地図の種類
   };
-  map = new google.maps.Map(document.getElementById('map'), Options);
+  var map = new google.maps.Map(document.getElementById('map'), Options);
 </script>
