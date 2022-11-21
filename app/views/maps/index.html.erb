@@ -2,7 +2,7 @@
 <script>
   var Options = {
     zoom: 15,      //地図の縮尺値
-    center: {lat: <%= @post.latitude %>, lng: <%= @post.longitude %> },    //地図の中心座標
+    center: {lat: 10, lng: 10 },    //地図の中心座標
     mapTypeId: 'roadmap'   //地図の種類
   };
   var map = new google.maps.Map(document.getElementById('map'), Options);
