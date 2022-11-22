@@ -28,7 +28,13 @@
     </div>
   </div>
   <% end %>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaIRKv5ow7sW_VnXTsxlHxYb7LAJrFS68&langage=ja">
+  <script>
+    function connectGoogleMap(){
+      var key = gon.map_key
+      var sc = document.createElement('script');
+      sc.src = `https://maps.googleapis.com/maps/api/js?key=${key}&langage=ja`;
+      document.body.appendChild(sc);
+    };
+    connectGoogleMap();
   </script>
 </div>
