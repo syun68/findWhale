@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
-  resources :maps, only: [:index]
+  resources :maps, only: [:show]
 end
