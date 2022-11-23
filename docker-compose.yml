@@ -21,3 +21,18 @@ services:
       - db
     stdin_open: true
     tty: true
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: webpacker
+
+  webpacker:
+    build: .
+    environment:
+      NODE_ENV: development
+      RAILS_ENV: development
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+    command: ./bin/webpack-dev-server
+    ports:
+      - '3035:3035'
+
+  webdriver_chrome:
+    image: selenium/standalone-chrome
