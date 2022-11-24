@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[account profile edit profile_update update]
   before_action :forbid_login_user, only: %i[new create]
@@ -58,8 +56,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.
-    require(:user).
-    permit(:name, :email, :introduction, :password, :password_confirmation, :avatar)
+    params
+      .require(:user)
+      .permit(:name, :email, :introduction, :password, :password_confirmation, :avatar)
   end
 end

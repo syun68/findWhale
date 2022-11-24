@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PostsController < ApplicationController
   before_action :logged_in_user, only: %i[create show edit_index edit update destroy]
 
@@ -52,8 +50,8 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.
-    require(:post).
-    permit(:title, :image, :place_prefecture, :place_detail, :description, :latitude, :longitude)
+    params
+      .require(:post)
+      .permit(:title, :image, :place_prefecture, :place_detail, :description, :latitude, :longitude)
   end
 end

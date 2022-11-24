@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module SessionsHelper
   # 引数のユーザーでログイン
   def log_in(user)
