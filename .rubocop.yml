@@ -11,6 +11,8 @@ AllCops:
     - 'spec/spec_helper.rb'
 Layout/LineLength:
   Max: 100
+Layout/BlockAlignment:
+  Enabled: false
 Style/AsciiComments:
   Enabled: false
 Style/Documentation:
