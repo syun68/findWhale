@@ -13,6 +13,8 @@ Layout/LineLength:
   Max: 100
 Layout/BlockAlignment:
   Enabled: false
+Rails/FilePath:
+  Enabled: false
 Style/AsciiComments:
   Enabled: false
 Style/Documentation:
