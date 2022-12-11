@@ -16,7 +16,7 @@
           プロフィール
       </h3>
       <div class="user_setting_form_inner">
-        <%= form_with url: "profile_update", model: @user do |f| %>
+        <%= form_for(@user, url: {controller: 'users', action: 'profile_update' }, method: :post) do |f| %>
           <% if @current_user.avatar.attached? %>
             <div class="user_setting_form_row", style ="justify-content:center;" >
               <%= image_tag @current_user.avatar, :alt => "アイコン画像", :class => "user_icon", :size => "100x100" %>
@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="user_setting_form_row">
-              <div class="user_setting_title_area">
+              <div class="user_setting_title_area" style="position: relative; left: 30%;">
                 <%= f.submit "更新", class:"button", id:"user_setting_form_button"%>
               </div>
             </div>
