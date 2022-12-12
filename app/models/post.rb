@@ -2,6 +2,11 @@ class Post < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   validates :user_id, presence: true
+  validates :title, presence: true
+  validates :image, presence: true
+  validates :place_prefecture, presence: true
+  validates :place_detail, presence: true
+  validates :description, presence: true
   geocoded_by :place_detail
   after_validation :geocode, if: :place_detail_changed?
 
