@@ -1,28 +1,28 @@
 <%= render "shared/error", obj:@user %>
 
 <div class="edit_container">
+  <h1 class="user_edit_title">アカウント編集</h1>
   <div class="edit_form">
-    <h3 class="edit_title">アカウント編集</h3>
     <div class="edit_form_inner">
       <%= form_for(@user, url: {controller: 'users', action: 'update'}, method: :post) do |f| %>
-          <div class="edit_title">メールアドレス</div>
-          <div class="edit_input_area">
+          <div class="edit_setting_title"  id="account_edit">メールアドレス</div>
+          <div class="edit_setting_input_area" id="account_edit">
             <%= f.email_field :email %>
           </div>
-          <div class="edit_title">変更後パスワード（変更する場合のみ入力）</div>
-          <div class="edit_input_area">
+          <div class="edit_setting_title" id="account_edit">変更後パスワード<span class="alert">（変更する場合のみ入力）</span></div>
+          <div class="edit_setting_input_area" id="account_edit">
             <%= f.password_field :password %>
           </div>
-          <div class="edit_setting_title">パスワード確認（変更する場合のみ入力）</div>
-          <div class="edit_input_area">
+          <div class="edit_setting_title"  id="account_edit">変更後パスワード確認<span class="alert">（変更する場合のみ入力）</span></div>
+          <div class="edit_setting_input_area" id="account_edit">
             <%= f.password_field :password_confirmation %>
           </div>
-          <div class="edit_title">現在のパスワード</div>
-          <div class="edit_input_area">
+          <div class="edit_setting_title"  id="account_edit">現在のパスワード</div>
+          <div class="edit_setting_input_area" id="account_edit">
             <%= f.password_field :current_password %>
           </div>
-          <div class="button">
-            <%= f.submit "更新", class:"button", id:"edit_form_button" %>
+          <div class="edit_setting_input_area" style="position: relative; left: 30%;">
+            <%= f.submit "更新", class:"button", id:"edit_submit_button" %>
           </div>
       <% end %>
     </div>
