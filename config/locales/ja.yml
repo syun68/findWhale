@@ -6,8 +6,9 @@ ja:
         password: "パスワード"
         password_confirmation: "パスワード確認"
         email: "メールアドレス"
-    errors:
-      messages:
-        invalid: "%{attribute}が正しくありません。"
-        blank: "%{attribute}を入力してください。"
-        too_short: "%{count}文字以上で入力してください。"
+      post:
+        title: "タイトル"
+        image: "画像"
+        place_prefecture: "都道府県"
+        place_detail: "詳細場所"
+        description: "詳細情報"
