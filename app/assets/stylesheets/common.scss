@@ -29,6 +29,20 @@ li{
   color: red;
 }
 
+.mandatory{
+  width: auto;
+  margin: 2px 2px;
+  padding: 2px;
+  color: #fff;
+  background-color: red;
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
 //ヘッダー
 header{
   height: 80px;
@@ -275,21 +289,12 @@ footer{
   margin: 10px 0;
 }
 
-.mandatory{
-  width: auto;
-  margin: 2px 2px;
-  padding: 2px;
-  color: #fff;
-  background-color: red;
-  border-radius: 0.25em;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .input_form input{
   width:90%;
+}
+
+.select{
+  justify-content: flex-start;
 }
 
 #submit_login {
