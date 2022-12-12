@@ -25,6 +25,10 @@ li{
   text-align: center;
 }
 
+.alert{
+  color: red;
+}
+
 //ヘッダー
 header{
   height: 80px;
@@ -394,8 +398,6 @@ footer{
 #user_setting_form_button{
   background: #007bff;
   width: 100%;
-  margin-left: 4%;
-  padding-left: 0;
 }
 
 #user_setting_form_button:visited{
@@ -444,6 +446,11 @@ footer{
 
 .edit_setting_input_area input{
   width: 90%;
+}
+
+#account_edit{
+  width: 100%;
+  font-size: 24px;
 }
 
 //post一覧
