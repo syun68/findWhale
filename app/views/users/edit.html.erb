@@ -5,25 +5,25 @@
   <div class="edit_form">
     <div class="edit_form_inner">
       <%= form_for(@user, url: {controller: 'users', action: 'update'}, method: :post) do |f| %>
-          <div class="edit_setting_title"  id="account_edit">メールアドレス</div>
-          <div class="edit_setting_input_area" id="account_edit">
-            <%= f.email_field :email %>
-          </div>
-          <div class="edit_setting_title" id="account_edit">変更後パスワード<span class="alert">（変更する場合のみ入力）</span></div>
-          <div class="edit_setting_input_area" id="account_edit">
-            <%= f.password_field :password %>
-          </div>
-          <div class="edit_setting_title"  id="account_edit">変更後パスワード確認<span class="alert">（変更する場合のみ入力）</span></div>
-          <div class="edit_setting_input_area" id="account_edit">
-            <%= f.password_field :password_confirmation %>
-          </div>
-          <div class="edit_setting_title"  id="account_edit">現在のパスワード</div>
-          <div class="edit_setting_input_area" id="account_edit">
-            <%= f.password_field :current_password %>
-          </div>
-          <div class="edit_setting_input_area" style="position: relative; left: 30%;">
-            <%= f.submit "更新", class:"button", id:"edit_submit_button" %>
-          </div>
+        <div class="edit_setting_title"  id="account_edit">メールアドレス</div>
+        <div class="edit_setting_input_area" id="account_edit">
+          <%= f.email_field :email %>
+        </div>
+        <div class="edit_setting_title" id="account_edit">変更後パスワード<span class="alert">（変更する場合のみ入力）</span></div>
+        <div class="edit_setting_input_area" id="account_edit">
+          <%= f.password_field :password %>
+        </div>
+        <div class="edit_setting_title"  id="account_edit">変更後パスワード確認<span class="alert">（変更する場合のみ入力）</span></div>
+        <div class="edit_setting_input_area" id="account_edit">
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="edit_setting_title"  id="account_edit">現在のパスワード</div>
+        <div class="edit_setting_input_area" id="account_edit">
+          <%= f.password_field :current_password %>
+        </div>
+        <div class="edit_setting_input_area" style="position: relative; left: 30%;">
+          <%= f.submit "更新", class:"button", id:"edit_submit_button" %>
+        </div>
       <% end %>
     </div>
   </div>
