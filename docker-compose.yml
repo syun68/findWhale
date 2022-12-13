@@ -19,3 +19,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    stdin_open: true
+    tty: true
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: webpacker

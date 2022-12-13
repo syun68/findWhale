@@ -1,0 +1,535 @@
+//共通
+html,body{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color: #007bff;
+}
+
+li{
+  list-style: none;
+}
+
+.notice{
+  background-color: cyan;
+  text-align: center;
+  margin: 0;
+}
+
+.error_messages{
+  text-align: center;
+  color: red;
+}
+
+.alert{
+  color: red;
+}
+
+.mandatory{
+  width: auto;
+  margin: 2px 2px;
+  padding: 2px;
+  color: #fff;
+  background-color: red;
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+//ヘッダー
+header{
+  height: 80px;
+  background-color: aquamarine;
+}
+
+.title{
+  color: #fff;
+}
+
+#title_top{
+  color: darkblue;
+}
+
+.header_link_container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header_search_area input::before{
+  content: '\f276';
+  color: #fff;
+}
+
+.header_left{
+  display: flex;
+  align-items: center;
+}
+
+.search_area{
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.d-none{
+  display: none;
+}
+
+#user_button_form a{
+  margin: 0 5%;
+  padding: 0 1em;
+  white-space: nowrap;
+  height: 60%;
+  font-size: 120%;
+}
+
+#login_button{
+  background: #007bff;
+}
+
+#login_button:visited{
+  color: #fff;
+}
+
+#register_button{
+  background: grey;
+}
+
+#register_button:visited{
+  color: #fff;
+}
+
+.user_info_top{
+  width: 10%;
+  padding: 4px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//ハンバーガーメニュー
+.menu-content{
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 80px;
+  right: 100%;
+  z-index: 80;
+  background-color: rgba(255,255,255,1);
+  padding: 0;
+}
+
+.menu-content ul {
+  padding:0 10px;
+}
+
+.menu-content ul li a{
+  color: #007bff;
+}
+
+.menu-content ul li a:visited{
+  color: #007bff;
+}
+
+#menu-btn-check{
+  display: none;
+}
+
+#menu-btn-check:checked ~ .menu-content{
+  right: 0;
+}
+
+//フッター
+footer{
+  background-color: #001;
+}
+
+//ボタン
+.button{
+ display       : inline-block;
+ border-radius : 5%;          /* 角丸       */
+ font-size     : 10pt;        /* 文字サイズ */
+ text-align    : center;      /* 文字位置   */
+ cursor        : pointer;     /* カーソル   */
+ padding       : 12px 12px;   /* 余白       */
+ // background    : #000066;     /* 背景色     */
+ color         : #ffffff;     /* 文字色     */
+ line-height   : 1em;         /* 1行の高さ  */
+ transition    : .3s;         /* なめらか変化 */
+ // border        : 2px solid #000066;    /* 枠の指定 */
+ // box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+}
+
+.button a:hover {
+  color         : yellow;     /* 背景色     */
+  // background    : #ffffff;     /* 文字色     */
+}
+
+#form_button{
+  background: #007bff;
+  margin-left: 4%;
+}
+
+
+//topページ (users#top)
+.modal_container{
+  width: 100%;
+  min-width: 100vw;
+  height: 500px;
+  padding-bottom: calc(558 / 1024 * 100%);
+  background: url("top.jpeg") center center / cover no-repeat;
+}
+
+.modal_form{
+  position: relative;
+  top: 20%;
+  left: 10%;
+  width: 40%;
+  height: 60%;
+  background: rgba(211,211,211,0.8);
+  border: solid 3px orange;
+  text-align: center;
+}
+
+.modal_form{
+  font-size: 140%;
+}
+
+.recommend{
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+.recommend_area_row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recommend_area_inner{
+  margin: 10px 20px;
+}
+
+.recommend_image{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.recommend_area_title{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.container{
+  width: 80%;
+  padding: 0 10%;
+}
+
+.center{
+  text-align: center;
+}
+
+.bg_image{
+  width: 100%;
+}
+
+.alternate{
+  padding-top: 10%;
+}
+
+.row{
+  display: flex;
+}
+
+.alternate .row:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+.intro_img{
+  width: 50%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.intro_stc{
+  width: 50%;
+  background-color: #f5fffa;
+}
+
+//ログインページ 登録ページ
+.form_title{
+  text-align: center;
+  margin-top: 0;
+}
+
+.user_form_container{
+  width: 40%;
+  margin-top: 5%;
+  padding: 3%;
+  border-radius: 1em;
+  box-shadow: 0px 1px 3px 0px;
+}
+
+.input_form{
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.input_form input{
+  width:90%;
+}
+
+.select{
+  justify-content: flex-start;
+}
+
+#submit_login {
+  width: 100%;
+  border: 0;
+  background: #007bff;
+}
+
+.form_link{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.form_link a{
+  color: #007bff;
+}
+
+//アイコン
+.user_icon{
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+
+//プロフィールページ(users#profile) アカウントページ(users#account)
+#user_setting_container{
+  display: flex;
+}
+
+
+.sidebar{
+  width: 20%;
+}
+
+.sidebar ul{
+  padding-right: 5%;
+}
+
+.sidebar ul li{
+  text-align: center;
+}
+
+.sidebar ul li a{
+  font-size: 120%;
+}
+
+.sidebar ul li a:hover{
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.mark{
+  border-right: 4px solid #007bff;
+  color: #007bff;
+}
+
+
+.main{
+  width: 80%;
+  background: whitesmoke;
+  border-left: 2px solid rgba(200,200,200,0.6);
+  display: flex;
+  justify-content: center;
+}
+
+.user_setting_form{
+  width: 80%;
+  margin: 5% 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.user_setting_form > *{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.user_setting_form_row{
+  display: flex;
+  padding: 4% 0;
+  border-top: 2px solid grey;
+}
+
+.user_setting_title_area{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.user_setting_input_area{
+  width: 60%;
+  text-align: left;
+}
+
+.user_setting_input_area input{
+  width: 90%;
+}
+
+.user_setting_title{
+  font-size: 100%;
+  font-weight: bold;
+  width: 40%;
+  padding: 0 2%;
+}
+
+#user_setting_form_button{
+  background: #007bff;
+  width: 100%;
+}
+
+#user_setting_form_button:visited{
+  color: #fff;
+}
+
+//編集(ユーザー、投稿)
+.edit_container{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.edit_form{
+  background: #fff;
+  border: 1px solid lightgrey;
+}
+
+.edit_form *:not(img){
+  padding-top: 1% 0;
+}
+
+.edit_setting_title{
+  font-size: 30px;
+  font-weight: bold;
+  width: 40%;
+  padding-left: 1%;
+}
+
+#edit_submit_button{
+  width: 50%;
+  color: #fff;
+  background: #007bff;
+}
+
+#edit_submit_button:visited{
+  color: #fff;
+}
+
+.edit_setting_input_area{
+  width: 60%;
+  padding-left: 4%;
+  margin-bottom: 2%;
+  text-align: left;
+}
+
+.edit_setting_input_area input{
+  width: 90%;
+}
+
+#account_edit{
+  width: 100%;
+  font-size: 24px;
+}
+
+//post一覧
+#post_index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post_container{
+  margin: 2%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+.post_form{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #333;
+  max-height: 100%;
+}
+
+#post_image_form{
+  justify-content: center;
+}
+
+.post_image{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post_title{
+  padding-right: 5%;
+  font-weight: bold;
+  font-family: "メイリオ";
+}
+
+//検索表示
+.room_row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.room_link_inner{
+  display: flex;
+  max-width: 50%;
+  margin: 10px;
+  border: 1px solid #909090;
+}
+
+.room_link_inner > div{
+  margin-bottom: 20px;
+}
+
+.room_link_image{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room_link_name{
+  color: cyan;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.room_link_address{
+  text-align: center;
+}
+
+.room_link_fee{
+  text-align: right;
+}

@@ -1,0 +1,31 @@
+<%= render "shared/error", obj:@post %>
+<div class="container" style="display:flex; justify-content:center;">
+  <div class="user_form_container">
+    <h2 class="form_title">目撃情報を作成</h2>
+    <div class="form_inner">
+      <%= form_with model:@post do |f| %>
+        <div class="input_form" id="name_form">
+          <div class="mandatory">必須</div>
+          <%= f.text_field :title, placeholder:"タイトル" %>
+        </div>
+        <div class="input_form" id="image_form">
+          <div class="mandatory">必須</div>
+          <%= f.file_field :image %>
+        </div>
+        <div class="input_form select">
+          <div class="mandatory">必須</div>
+          <%= f.select :place_prefecture, Post.place_prefectures.keys, {} %>
+        </div>
+        <div class="input_form" id="place_detail_form">
+          <div class="mandatory">必須</div>
+          <%= f.text_field :place_detail, placeholder:"詳細位置　〇〇市　〇〇海上など" %>
+        </div>
+        <div class="input_form" id="description_form">
+          <div class="mandatory">必須</div>
+          <%= f.text_field :description, placeholder:"自由記述" %>
+        </div>
+          <%= f.submit "送信", class:"button", id:"submit_login" %>
+      <% end %>
+    </div>
+  </div>
+</div>
