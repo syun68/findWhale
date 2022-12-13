@@ -34,10 +34,6 @@ jobs:
 
       - run: mv config/database.yml.ci config/database.yml
 
-      - run:
-          name: run rubocop
-          command: bundle exec rubocop --parallel
-
       # run tests!
       - run:
           name: yarn Install
