@@ -15,26 +15,26 @@ RSpec.describe User, type: :model do
       it 'is invalid without name' do
         user = User.new(name: nil)
         user.valid?
-        expect(user.errors[:name]).to include('名前を入力してください。')
+        expect(user.errors[:name]).to include('を入力してください')
       end
 
       it 'is invalid without email' do
         user = User.new(email: nil)
         user.valid?
-        expect(user.errors[:email]).to include('メールアドレスを入力してください。')
+        expect(user.errors[:email]).to include('を入力してください')
       end
 
       it 'is invalid without password' do
         user = User.new(password: nil)
         user.valid?
-        expect(user.errors[:password]).to include('パスワードを入力してください。')
+        expect(user.errors[:password]).to include('を入力してください')
       end
     end
 
     it 'is invalid with too short password' do
       user = User.new(password: 'hoge')
       user.valid?
-      expect(user.errors[:password]).to include('6文字以上で入力してください。')
+      expect(user.errors[:password]).to include('は6文字以上で入力してください')
     end
 
     it 'is invalid with invalid password_confirmation' do
