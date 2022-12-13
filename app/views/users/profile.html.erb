@@ -26,36 +26,35 @@
               <%= image_tag "user/default_user.jpg", :alt => "アイコン画像", :class => "user_icon"%>
             </div>
           <% end %>
-
-            <div class="user_setting_form_row">
-              <div class="user_setting_title_area">
-                <div class="user_setting_title">アイコン画像</div>
-              </div>
-              <div class="user_setting_input_area">
-                <%= f.file_field :avatar %>
-              </div>
+          <div class="user_setting_form_row">
+            <div class="user_setting_title_area">
+              <div class="user_setting_title">アイコン画像</div>
             </div>
-            <div class="user_setting_form_row">
-              <div class="user_setting_title_area">
-                <div class="user_setting_title">名前</div>
-              </div>
-              <div class="user_setting_input_area">
-                <%= f.text_field :name %>
-              </div>
+            <div class="user_setting_input_area">
+              <%= f.file_field :avatar %>
             </div>
-            <div class="user_setting_form_row">
-              <div class="user_setting_title_area">
-                <div class="user_setting_title">自己紹介</div>
-              </div>
-              <div class="user_setting_input_area">
-                <%= f.text_area :introduction %>
-              </div>
+          </div>
+          <div class="user_setting_form_row">
+            <div class="user_setting_title_area">
+              <div class="user_setting_title">名前</div>
             </div>
-            <div class="user_setting_form_row">
-              <div class="user_setting_title_area" style="position: relative; left: 30%;">
-                <%= f.submit "更新", class:"button", id:"user_setting_form_button"%>
-              </div>
+            <div class="user_setting_input_area">
+              <%= f.text_field :name %>
             </div>
+          </div>
+          <div class="user_setting_form_row">
+            <div class="user_setting_title_area">
+              <div class="user_setting_title">自己紹介</div>
+            </div>
+            <div class="user_setting_input_area">
+              <%= f.text_area :introduction %>
+            </div>
+          </div>
+          <div class="user_setting_form_row">
+            <div class="user_setting_title_area" style="position: relative; left: 30%;">
+              <%= f.submit "更新", class:"button", id:"user_setting_form_button"%>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
