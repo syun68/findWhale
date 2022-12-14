@@ -41,7 +41,10 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update(post_params)
+    if params[:post][:place_prefecture] == '---'
+      flash[:notice] = '目撃場所の都道府県を選択してください'
+      render 'posts/edit', status: :unprocessable_entity
+    elsif @post.update(post_params)
       flash[:notice] = '投稿を更新しました'
       redirect_to "/posts/#{@current_user.id}/index"
     else
