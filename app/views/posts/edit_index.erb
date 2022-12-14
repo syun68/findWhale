@@ -1,3 +1,4 @@
+<h1 class="post_top_title">投稿編集</h1>
 <div class="container" id="post_index">
   <% @posts.each do |post| %>
     <div class="post_container">
@@ -22,7 +23,7 @@
           <div class="post_title">状況詳細</div>
             <%= post.description %>
         </div>
-        <div class="post_form">
+        <div class="post_form" id="post_edit_link_container">
           <%= link_to "編集", edit_post_path(post_id: post.id) %>
           <%= link_to "削除", post, method: :delete, data: {confirm: "本当に削除しますか？"} %>
         </div>
