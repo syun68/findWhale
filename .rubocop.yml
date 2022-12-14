@@ -10,7 +10,7 @@ AllCops:
     - 'tmp/**/*'
     - 'spec/spec_helper.rb'
 Layout/LineLength:
-  Max: 100
+  Max: 110
 Layout/BlockAlignment:
   Enabled: false
 Rails/FilePath:
@@ -22,7 +22,7 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 Metrics/AbcSize:
-  Max: 30
+  Max: 32
 Metrics/BlockLength:
   Max: 55
 Metrics/MethodLength:
