@@ -64,4 +64,5 @@ RSpec.configure do |config|
     driven_by :rack_test
   end
   config.include FactoryBot::Syntax::Methods
+  config.include LoginHelpers
 end
