@@ -15,10 +15,15 @@ class PostsController < ApplicationController
       **post_params,
       user_id: @current_user.id
     )
-    if @post.save
-      flash[:notice] = '目撃情報を投稿しました'
-      redirect_to :posts
+    unless params[:post][:place_prefecture] == "---"
+      if @post.save
+        flash[:notice] = '目撃情報を投稿しました'
+        redirect_to :posts
+      else
+        render 'posts/new', status: :unprocessable_entity
+      end
     else
+      flash[:notice] = '目撃場所の都道府県を選択してください'
       render 'posts/new', status: :unprocessable_entity
     end
   end
