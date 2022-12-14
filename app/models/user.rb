@@ -11,10 +11,10 @@ class User < ApplicationRecord
   before_update :update_current_password
 
   def set_current_password
-    self.current_password = password
+    self.current_password = self.password_digest
   end
 
   def update_current_password
-    self.current_password = password
+    self.current_password = self.password_digest
   end
 end
