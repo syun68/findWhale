@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user, only: %i[create show edit_index edit update destroy]
-
+  before_action :logged_in_user
+  
   def index
     gon.map_key = ENV['Google_Map_API']
     @posts = Post.all
