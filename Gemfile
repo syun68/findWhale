@@ -67,9 +67,9 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rspec_junit_formatter'
   gem 'rspec-rails'
   gem 'webdrivers'
-  gem 'rspec_junit_formatter'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

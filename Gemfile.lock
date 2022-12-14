@@ -244,6 +244,8 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    rspec_junit_formatter (0.6.0)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (0.93.1)
       parallel (~> 1.10)
       parser (>= 2.7.1.5)
@@ -358,6 +360,7 @@ DEPENDENCIES
   rails (~> 7.0.2)
   rails-i18n
   rspec-rails
+  rspec_junit_formatter
   rubocop
   rubocop-airbnb
   rubocop-rails
