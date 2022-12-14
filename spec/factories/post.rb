@@ -8,7 +8,7 @@ FactoryBot.define do
     after(:build) do |post|
       post.image.attach(
         io: File.open('spec/fixtures/post_test_image.jpg'),
-        filename: 'post_test_image.jpg', content_type: 'image/jpg'
+        filename: 'post_test_image.jpg'
       )
     end
   end

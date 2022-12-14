@@ -36,7 +36,7 @@ RSpec.describe 'Users', type: :system do
     expect(current_path).to eq users_profile_path
     expect(page).to have_content('ユーザー情報を更新しました')
     # パスワードが更新されていることを確認
-    expect(user.reload.current_password).to eq 'afterpassword'
+    expect(user.reload.current_password).to eq user.authenticate('afterpassword').password_digest
   end
 
   scenario 'プロフィール設定をする' do
@@ -52,7 +52,7 @@ RSpec.describe 'Users', type: :system do
     # 名前、自己紹介を更新
     user.avatar.attach(
       io: File.open('spec/fixtures/user_test_image.png'),
-      filename: 'user_test_image.png', content_type: 'image/jpg'
+      filename: 'user_test_image.png'
     )
     fill_in 'user[name]', with: 'aftername'
     fill_in 'user[introduction]', with: 'hello world!'
