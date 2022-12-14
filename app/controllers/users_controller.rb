@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(@current_user.id)
     if params[:user][:password] == params[:user][:password_confirmation]
-      if params[:user][:current_password] == @current_user.current_password
+      if @user.authenticate(params[:user][:current_password]).password_digest == @user.current_password
         if @user.update(user_params)
           flash[:notice] = 'ユーザー情報を更新しました'
           redirect_to :users_profile
