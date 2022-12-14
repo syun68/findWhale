@@ -38,6 +38,14 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:notice] = "投稿を更新しました"
+      redirect_to "/posts/#{@current_user.id}/index"
+    else
+      @post = Post.new(post_params)
+      flash[:notice] = '更新に失敗しました'
+      render 'posts/edit', status: :unprocessable_entity
+    end
   end
 
   def destroy
