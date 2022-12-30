@@ -31,8 +31,13 @@ class PostsController < ApplicationController
   end
 
   def edit_index
-    @posts = Post.where(user_id: params[:id])
-    flash[:notice] = '検索結果がありません' if @posts.blank?
+    if @current_user.id == params[:id].to_i
+      @posts = Post.where(user_id: params[:id])
+      flash[:notice] = '検索結果がありません' if @posts.blank?
+    else
+      flash[:notice] = '他ユーザーのページにはアクセスできません'
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -48,9 +53,8 @@ class PostsController < ApplicationController
       flash[:notice] = '投稿を更新しました'
       redirect_to "/posts/#{@current_user.id}/index"
     else
-      @post = Post.new(post_params)
-      flash[:notice] = '更新に失敗しました'
-      render 'posts/edit', status: :unprocessable_entity
+      flash[:notice] = '更新に失敗しました 入力値が空欄になっていませんか？'
+      redirect_to edit_post_path(post_id: @post.id)
     end
   end
 
