@@ -7,7 +7,6 @@ RSpec.describe 'Posts', js: true, type: :system do
   let!(:post2) { create(:post, title: '投稿2') }
 
   before do
-    driven_by(:rack_test)
     user.post << post1
     user.post << post2
     # ログイン専用ページをテストするため、最初にログイン
@@ -104,7 +103,7 @@ RSpec.describe 'Posts', js: true, type: :system do
       scenario 'エラーメッセージが表示され、トップページに遷移する' do
         visit "/posts/#{other_user.id}/index"
         expect(current_path).to eq root_path
-        expect(page).to have_content('詳細情報を入力してください')
+        expect(page).to have_content('他ユーザーのページにはアクセスできません')
       end
     end
 
@@ -138,17 +137,13 @@ RSpec.describe 'Posts', js: true, type: :system do
         end
       end
 
-      # scenario '削除ボタンをクリックする' do
-      #   visit "/posts/#{user.id}/index"
-      #   within '#post_edit_link_container', match: :first do
-      #     click_on '削除', match: :first
-      #     # expect{
-      #       expect(page.accept_confirm).to eq '本当に削除しますか？'
-      #       expect(page).to have_content '投稿を削除しました'
-      #       sleep 0.5
-      #     # }. to change(user.post, :count).by(-1)
-      #   end
-      # end
+      scenario '削除ボタンをクリックする' do
+        visit "/posts/#{user.id}/index"
+        within '#post_edit_link_container', match: :first do
+          click_on '削除', match: :first
+        end
+        expect(page).to have_content '投稿を削除しました'
+      end
     end
   end
 
