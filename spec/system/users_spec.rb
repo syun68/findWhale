@@ -5,10 +5,7 @@ RSpec.describe 'Users', type: :system do
 
   before do
     # ログイン専用ページをテストするため、最初にログイン
-    visit login_path
-    fill_in 'session[email]', with: user.email
-    fill_in 'session[password]', with: user.password
-    click_button 'ログイン'
+    login
   end
 
   scenario 'アカウント設定画面を表示する' do

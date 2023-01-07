@@ -2,6 +2,7 @@ FactoryBot.define do
   factory :post do
     association :user
     title { Faker::Lorem.characters(number: 10) }
+    place_prefecture { :東京都 }
     place_detail { '小笠原　父島' }
     description { Faker::Lorem.characters(number: 10) }
 

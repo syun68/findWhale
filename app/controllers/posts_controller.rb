@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user, only: %i[create show edit_index edit update destroy]
+  before_action :logged_in_user
 
   def index
     gon.map_key = ENV['Google_Map_API']
@@ -15,7 +15,10 @@ class PostsController < ApplicationController
       **post_params,
       user_id: @current_user.id
     )
-    if @post.save
+    if params[:post][:place_prefecture] == '---'
+      flash[:notice] = '目撃場所の都道府県を選択してください'
+      render 'posts/new', status: :unprocessable_entity
+    elsif @post.save
       flash[:notice] = '目撃情報を投稿しました'
       redirect_to :posts
     else
@@ -28,8 +31,13 @@ class PostsController < ApplicationController
   end
 
   def edit_index
-    @posts = Post.where(user_id: params[:id])
-    flash[:notice] = '検索結果がありません' if @posts.blank?
+    if @current_user.id == params[:id].to_i
+      @posts = Post.where(user_id: params[:id])
+      flash[:notice] = '検索結果がありません' if @posts.blank?
+    else
+      flash[:notice] = '他ユーザーのページにはアクセスできません'
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -38,6 +46,16 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    if params[:post][:place_prefecture] == '---'
+      flash[:notice] = '目撃場所の都道府県を選択してください'
+      render 'posts/edit', status: :unprocessable_entity
+    elsif @post.update(post_params)
+      flash[:notice] = '投稿を更新しました'
+      redirect_to "/posts/#{@current_user.id}/index"
+    else
+      flash[:notice] = '更新に失敗しました 入力値が空欄になっていませんか？'
+      redirect_to edit_post_path(post_id: @post.id)
+    end
   end
 
   def destroy

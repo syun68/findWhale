@@ -1,3 +1,5 @@
+<%= render "shared/error", obj:@post %>
+
 <div class="edit_container">
   <h1 class="user_edit_title">投稿編集</h1>
   <div class="edit_form">
@@ -5,7 +7,7 @@
       <%= form_with model:@post do |f| %>
         <div class="edit_setting_title">タイトル</div>
         <div class="edit_setting_input_area">
-          <%= f.text_field :title %>
+          <%= f.text_field :title, placeholder: @post.title %>
         </div>
         <div class="edit_setting_title">画像</div>
           <%= image_tag @post.image %>
@@ -19,7 +21,11 @@
         </div>
         <div class="edit_setting_title">発見場所（詳細位置）</div>
         <div class="edit_setting_input_area">
-          <%= f.text_field :place_detail, placeholder:"詳細位置　〇〇市　〇〇海上など" %>
+          <%= f.text_field :place_detail, placeholder: @post.place_detail %>
+        </div>
+        <div class="edit_setting_title">状況詳細（自由記述）</div>
+        <div class="edit_setting_input_area">
+          <%= f.text_field :description, placeholder: @post.description %>
         </div>
         <div class="edit_setting_input_area" style="position: relative; left: 30%;">
           <%= f.submit "更新", id:"edit_submit_button" %>

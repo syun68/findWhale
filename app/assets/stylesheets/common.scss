@@ -5,6 +5,7 @@ html,body{
 
 a{
   text-decoration: none;
+  color: #007bff;
 }
 
 a:visited{
@@ -180,7 +181,6 @@ footer{
   margin-left: 4%;
 }
 
-
 //topページ (users#top)
 .modal_container{
   width: 100%;
@@ -352,7 +352,6 @@ footer{
   color: #007bff;
 }
 
-
 .main{
   width: 80%;
   background: whitesmoke;
@@ -494,6 +493,16 @@ footer{
   padding-right: 5%;
   font-weight: bold;
   font-family: "メイリオ";
+}
+
+.post_top_title{
+  color: orange;
+  font-family: fantasy;
+  text-align: center;
+}
+
+#post_edit_link_container{
+  justify-content: space-around;
 }
 
 //検索表示
