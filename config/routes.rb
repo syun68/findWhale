@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root :to => 'users#top'
   get    'maps/index'
   get    'posts/index'
+  post   '/search',                         to: 'search#search'
   get    '/login',                          to: 'sessions#new'
   post   '/login',                          to: 'sessions#create'
   delete '/logout',                         to: 'sessions#destroy'
