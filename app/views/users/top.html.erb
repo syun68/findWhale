@@ -1,7 +1,12 @@
 <div class="container">
   <div class="center">
     <h1>海の生き物に会いに行きませんか？</h1>
-    <%= image_tag "top/top_bg.jpg", alt: "Whale BG Image", class: "bg_image" %>
+    <div class="slide-items" id="js-slide">
+      <%= image_tag "top/slide_item1.jpg", alt: "slide_item1" %>
+      <%= image_tag "top/slide_item2.jpg", alt: "slide_item2" %>
+      <%= image_tag "top/slide_item3.jpg", alt: "slide_item3" %>
+      <%= image_tag "top/slide_item4.jpg", alt: "slide_item4" %>
+    </div>
     <div class="alternate">
       <div class="row">
         <%= image_tag "top/intro1.jpg", class: "intro_img" %>
@@ -30,3 +35,20 @@
     </div>
   </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+const slides = $("#js-slide").find("img");
+const slideLength = slides.length;
+const show = 3000;
+let now = 0;
+let next = 1;
+const fade = 1500;
+const slideshow = () => {
+  slides.eq(now % slideLength).fadeOut(fade).removeClass("zoom");
+  slides.eq(next % slideLength).fadeIn(fade).addClass("zoom");
+  now++
+  next++
+};
+
+setInterval(slideshow, show);
+</script>
