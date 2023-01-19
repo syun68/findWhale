@@ -241,10 +241,6 @@ footer{
   text-align: center;
 }
 
-.bg_image{
-  width: 100%;
-}
-
 .alternate{
   padding-top: 10%;
 }
@@ -266,6 +262,28 @@ footer{
 .intro_stc{
   width: 50%;
   background-color: #f5fffa;
+}
+
+.slide-items {
+  list-style: none;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide-items img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 4s linear transform .4s;
+  object-fit: cover;
+}
+
+.slide-items .zoom {
+  transform: scale(1.05);
 }
 
 //ログインページ 登録ページ
@@ -459,6 +477,23 @@ footer{
 }
 
 //post一覧
+.sort_area{
+  display: flex;
+  justify-content: center;
+}
+
+.sort_button{
+  margin: 0 4%;
+  border: 2px #000 solid;
+  border-radius: 5%;
+  background-color: grey;
+  color: #fff;
+}
+
+.sort_button:visited{
+  color: #fff;
+}
+
 #post_index{
   display: flex;
   flex-wrap: wrap;
@@ -503,42 +538,4 @@ footer{
 
 #post_edit_link_container{
   justify-content: space-around;
-}
-
-//検索表示
-.room_row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.room_link_inner{
-  display: flex;
-  max-width: 50%;
-  margin: 10px;
-  border: 1px solid #909090;
-}
-
-.room_link_inner > div{
-  margin-bottom: 20px;
-}
-
-.room_link_image{
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.room_link_name{
-  color: cyan;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.room_link_address{
-  text-align: center;
-}
-
-.room_link_fee{
-  text-align: right;
 }
