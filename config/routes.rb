@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'users#top'
+  root  :to => 'top#top'
   get    'maps/index'
   get    'posts/index'
   post   '/search',                         to: 'search#search'
