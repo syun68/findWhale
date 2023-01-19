@@ -181,57 +181,7 @@ footer{
   margin-left: 4%;
 }
 
-//topページ (users#top)
-.modal_container{
-  width: 100%;
-  min-width: 100vw;
-  height: 500px;
-  padding-bottom: calc(558 / 1024 * 100%);
-  background: url("top.jpeg") center center / cover no-repeat;
-}
-
-.modal_form{
-  position: relative;
-  top: 20%;
-  left: 10%;
-  width: 40%;
-  height: 60%;
-  background: rgba(211,211,211,0.8);
-  border: solid 3px orange;
-  text-align: center;
-}
-
-.modal_form{
-  font-size: 140%;
-}
-
-.recommend{
-  position: relative;
-  left: 10%;
-  width: 80%;
-}
-
-.recommend_area_row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.recommend_area_inner{
-  margin: 10px 20px;
-}
-
-.recommend_image{
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.recommend_area_title{
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
+//topページ
 .container{
   width: 80%;
   padding: 0 10%;
@@ -262,6 +212,29 @@ footer{
 .intro_stc{
   width: 50%;
   background-color: #f5fffa;
+}
+
+.center_item{
+  display: grid;
+  place-items: center;
+}
+
+.emphasize{
+  font-size: 120%;
+  font-weight: bold;
+  color: orange;
+}
+
+.stc_title{
+  color:#DC7633;
+  text-decoration:underline;
+  margin-bottom: 0;
+}
+
+.fish_shapes > li{
+  margin-left: 20%;
+  list-style: disc;
+  text-align: left;
 }
 
 .slide-items {
