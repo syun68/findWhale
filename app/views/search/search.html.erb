@@ -1,4 +1,8 @@
 <h1 class="post_top_title">検索結果</h1>
+<div class="sort_area">
+  <%= link_to '投稿順でソートする', search_path(keyword: "#{params[:keyword]}"), method: :post , class: "sort_button" %>
+  <%= link_to '新着順でソートする', search_path(sort_update: "true", keyword: "#{params[:keyword]}"), method: :post, class: "sort_button" %>
+</div>
 <div class="container"id="post_index">
   <% @posts.each do |post| %>
   <div class="post_container">

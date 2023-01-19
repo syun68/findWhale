@@ -6,6 +6,8 @@ class SearchController < ApplicationController
       if @posts.count == 0
         flash[:notice] = '検索結果がありませんでした'
         redirect_to root_path
+      elsif params[:sort_update]
+        @posts = Post.search(params[:keyword]).latest
       end
   end
 

@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 
   def index
     gon.map_key = ENV['Google_Map_API']
-    @posts = Post.all
+    if params[:sort_update]
+      @posts = Post.latest
+    else
+      @posts = Post.all
+    end
   end
 
   def new
