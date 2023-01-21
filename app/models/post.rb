@@ -15,7 +15,6 @@ class Post < ApplicationRecord
   def self.search(keyword)
     posts = Post
             .where(['title LIKE ? OR description LIKE ? OR place_detail LIKE ?', "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
-    posts
   end
 
   enum place_prefecture: {
