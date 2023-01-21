@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Tops", type: :system do
+RSpec.describe 'Tops', type: :system do
   let(:user) { create(:user, name: 'user') }
   let!(:post1) { create(:post, title: '投稿1', place_detail: '八丈島', description: 'クジラ') }
   let!(:post2) { create(:post, title: '投稿2', place_detail: '知床', description: 'シャチ') }
@@ -18,7 +18,7 @@ RSpec.describe "Tops", type: :system do
         visit root_path
         fill_in 'keyword', with: '八丈島'
         click_on '検索'
-        #検索結果一覧ページに遷移していることを確認
+        # 検索結果一覧ページに遷移していることを確認
         expect(current_path).to eq search_path
         expect(page).to have_content('投稿1')
         expect(page).not_to have_content('投稿2')
@@ -31,7 +31,7 @@ RSpec.describe "Tops", type: :system do
         visit root_path
         fill_in 'keyword', with: 'アザラシ'
         click_on '検索'
-        #検索結果一覧ページに遷移しておらず、エラーメッセージが表示されていることを確認
+        # 検索結果一覧ページに遷移しておらず、エラーメッセージが表示されていることを確認
         expect(current_path).to eq root_path
         expect(page).to have_content('検索結果がありませんでした')
         expect(page).not_to have_content('投稿1')

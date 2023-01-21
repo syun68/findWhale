@@ -10,7 +10,7 @@ AllCops:
     - 'tmp/**/*'
     - 'spec/spec_helper.rb'
 Layout/LineLength:
-  Max: 110
+  Max: 130
 Layout/BlockAlignment:
   Enabled: false
 Rails/FilePath:
