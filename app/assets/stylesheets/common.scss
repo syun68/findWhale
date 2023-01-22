@@ -531,6 +531,11 @@ footer{
     text-align: center;
   }
 
+  .search_area input{
+    margin-top: 4%;
+  }
+
+
   //トップページ
   .center h1{
     font-size: 1.2em;
@@ -560,4 +565,29 @@ footer{
     margin-left: initial;
   }
 
+  //アカウント作成、ログインページ
+  .user_form_container{
+    width: 100%;
+  }
+
+  //アカウント設定ページ
+  #user_setting_container{
+    display: block;
+  }
+
+  #user_setting_container > *{
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mark{
+    border-right: initial;
+    border-bottom:  4px solid #007bff;
+  }
 }
