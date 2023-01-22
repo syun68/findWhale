@@ -1,4 +1,8 @@
 <h1 class="post_top_title">みんなが発見した海洋生物情報</h1>
+<div class="sort_area">
+  <%= link_to '投稿順でソートする', posts_index_path, class: "sort_button" %>
+  <%= link_to '新着順でソートする', posts_index_path(sort_update: "true"), class: "sort_button" %>
+</div>
 <div class="container"id="post_index">
   <% @posts.each do |post| %>
   <div class="post_container">

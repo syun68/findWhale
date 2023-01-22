@@ -2,8 +2,6 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[account profile edit profile_update update]
   before_action :forbid_login_user, only: %i[new create]
 
-  def top; end
-
   def new
     @user = User.new
   end

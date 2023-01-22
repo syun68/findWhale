@@ -181,57 +181,7 @@ footer{
   margin-left: 4%;
 }
 
-//topページ (users#top)
-.modal_container{
-  width: 100%;
-  min-width: 100vw;
-  height: 500px;
-  padding-bottom: calc(558 / 1024 * 100%);
-  background: url("top.jpeg") center center / cover no-repeat;
-}
-
-.modal_form{
-  position: relative;
-  top: 20%;
-  left: 10%;
-  width: 40%;
-  height: 60%;
-  background: rgba(211,211,211,0.8);
-  border: solid 3px orange;
-  text-align: center;
-}
-
-.modal_form{
-  font-size: 140%;
-}
-
-.recommend{
-  position: relative;
-  left: 10%;
-  width: 80%;
-}
-
-.recommend_area_row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.recommend_area_inner{
-  margin: 10px 20px;
-}
-
-.recommend_image{
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.recommend_area_title{
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
+//topページ
 .container{
   width: 80%;
   padding: 0 10%;
@@ -239,10 +189,6 @@ footer{
 
 .center{
   text-align: center;
-}
-
-.bg_image{
-  width: 100%;
 }
 
 .alternate{
@@ -266,6 +212,51 @@ footer{
 .intro_stc{
   width: 50%;
   background-color: #f5fffa;
+}
+
+.center_item{
+  display: grid;
+  place-items: center;
+}
+
+.emphasize{
+  font-size: 120%;
+  font-weight: bold;
+  color: orange;
+}
+
+.stc_title{
+  color:#DC7633;
+  text-decoration:underline;
+  margin-bottom: 0;
+}
+
+.fish_shapes > li{
+  margin-left: 20%;
+  list-style: disc;
+  text-align: left;
+}
+
+.slide-items {
+  list-style: none;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide-items img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 4s linear transform .4s;
+  object-fit: cover;
+}
+
+.slide-items .zoom {
+  transform: scale(1.05);
 }
 
 //ログインページ 登録ページ
@@ -459,6 +450,23 @@ footer{
 }
 
 //post一覧
+.sort_area{
+  display: flex;
+  justify-content: center;
+}
+
+.sort_button{
+  margin: 0 4%;
+  border: 2px #000 solid;
+  border-radius: 5%;
+  background-color: grey;
+  color: #fff;
+}
+
+.sort_button:visited{
+  color: #fff;
+}
+
 #post_index{
   display: flex;
   flex-wrap: wrap;
@@ -503,42 +511,4 @@ footer{
 
 #post_edit_link_container{
   justify-content: space-around;
-}
-
-//検索表示
-.room_row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.room_link_inner{
-  display: flex;
-  max-width: 50%;
-  margin: 10px;
-  border: 1px solid #909090;
-}
-
-.room_link_inner > div{
-  margin-bottom: 20px;
-}
-
-.room_link_image{
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.room_link_name{
-  color: cyan;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.room_link_address{
-  text-align: center;
-}
-
-.room_link_fee{
-  text-align: right;
 }
