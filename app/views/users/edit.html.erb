@@ -4,7 +4,7 @@
   <h1 class="user_edit_title">アカウント編集</h1>
   <div class="edit_form">
     <div class="edit_form_inner">
-      <%= form_for(@user, url: {controller: 'users', action: 'update'}, method: :post) do |f| %>
+      <%= form_for(@user, url: users_update_path, method: :post) do |f| %>
         <div class="edit_setting_title"  id="account_edit">メールアドレス</div>
         <div class="edit_setting_input_area" id="account_edit">
           <%= f.email_field :email %>
