@@ -590,4 +590,19 @@ footer{
     border-right: initial;
     border-bottom:  4px solid #007bff;
   }
+
+  //投稿一覧
+  #post_index{
+    display: block;
+    width: 80%;
+  }
+
+  //投稿編集
+  .edit_form{
+    max-width: 90%;
+  }
+
+  .post_edit_img{
+    max-width: 100%;
+  }
 }
