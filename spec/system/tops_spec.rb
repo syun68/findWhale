@@ -13,9 +13,12 @@ RSpec.describe 'Tops', type: :system do
   end
 
   describe '検索をする' do
+    before do
+      visit root_path
+    end
+
     context '存在する投稿のキーワードを検索フォームに入力する' do
       scenario 'キーワードに合う投稿のみが返される' do
-        visit root_path
         fill_in 'keyword', with: '八丈島'
         click_on '検索'
         # 検索結果一覧ページに遷移していることを確認
@@ -28,7 +31,6 @@ RSpec.describe 'Tops', type: :system do
 
     context '存在しないキーワードを検索フォームに入力する' do
       scenario 'エラーメッセージが表示される' do
-        visit root_path
         fill_in 'keyword', with: 'アザラシ'
         click_on '検索'
         # 検索結果一覧ページに遷移しておらず、エラーメッセージが表示されていることを確認
