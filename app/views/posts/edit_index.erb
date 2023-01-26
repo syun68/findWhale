@@ -1,4 +1,8 @@
 <h1 class="post_top_title">投稿編集</h1>
+<div class="sort_area">
+  <%= link_to '投稿順でソートする', "/posts/#{@current_user.id}/index", class: "sort_button" %>
+  <%= link_to '新着順でソートする', "/posts/#{@current_user.id}/index?sort_update=true", class: "sort_button" %>
+</div>
 <div class="container" id="post_index">
   <% @posts.each do |post| %>
     <div class="post_container">

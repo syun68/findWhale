@@ -10,7 +10,7 @@
           <%= f.text_field :title, placeholder: @post.title %>
         </div>
         <div class="edit_setting_title">画像</div>
-          <%= image_tag @post.image %>
+          <%= image_tag @post.image, class: "post_edit_img" %>
           <div class="edit_setting_input_area alert">変更する場合は下記より画像を選んでください</div>
           <div class="edit_setting_input_area">
             <%= f.file_field :image %>

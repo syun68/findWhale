@@ -111,11 +111,14 @@ header{
 }
 
 .user_info_top{
-  width: 10%;
   padding: 4px 2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.user_info_top .title{
+  padding-right: 8%;
 }
 
 //ハンバーガーメニュー
@@ -511,4 +514,95 @@ footer{
 
 #post_edit_link_container{
   justify-content: space-around;
+}
+
+@media screen and (max-width:768px) {
+  //共通
+  body{
+    max-width: 768px;
+  }
+
+  //ヘッダー
+  .header_left{
+    max-width: 40%;
+  }
+
+  .search_area{
+    text-align: center;
+  }
+
+  .search_area input{
+    margin-top: 4%;
+  }
+
+
+  //トップページ
+  .center h1{
+    font-size: 1.2em;
+  }
+
+  .slide-items{
+    height: 20em;
+  }
+
+  .alternate .row{
+    display: block;
+  }
+
+  .alternate .row *{
+    width: 100%;
+  }
+
+  .alternate .row h3{
+    margin-top: 0;
+  }
+
+  .intro_stc{
+    font-size: 0.8em;
+  }
+
+  .intro_stc .fish_shapes li{
+    margin-left: initial;
+  }
+
+  //アカウント作成、ログインページ
+  .user_form_container{
+    width: 100%;
+  }
+
+  //アカウント設定ページ
+  #user_setting_container{
+    display: block;
+  }
+
+  #user_setting_container > *{
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mark{
+    border-right: initial;
+    border-bottom:  4px solid #007bff;
+  }
+
+  //投稿一覧
+  #post_index{
+    display: block;
+    width: 80%;
+  }
+
+  //投稿編集
+  .edit_form{
+    max-width: 90%;
+  }
+
+  .post_edit_img{
+    max-width: 100%;
+  }
 }

@@ -36,7 +36,11 @@ class PostsController < ApplicationController
 
   def edit_index
     if @current_user.id == params[:id].to_i
-      @posts = Post.where(user_id: params[:id])
+      @posts = if params[:sort_update]
+                 Post.where(user_id: params[:id]).latest
+               else
+                 Post.where(user_id: params[:id])
+               end
       flash[:notice] = '検索結果がありません' if @posts.blank?
     else
       flash[:notice] = '他ユーザーのページにはアクセスできません'
