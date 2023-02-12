@@ -56,4 +56,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['JAWSDB_URL'] %>
+  database: <%= Rails.application.credentials.db[:database] %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  socket: <%= Rails.application.credentials.db[:socket] %>
