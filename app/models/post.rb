@@ -13,9 +13,8 @@ class Post < ApplicationRecord
   scope :latest, -> { order(updated_at: :desc) }
 
   def self.search(keyword)
-    posts = Post
-            .where(['title LIKE ? OR description LIKE ? OR place_detail LIKE ?', "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
-    posts
+    Post
+      .where(['title LIKE ? OR description LIKE ? OR place_detail LIKE ?', "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
   end
 
   enum place_prefecture: {
