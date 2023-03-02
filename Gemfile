@@ -39,6 +39,11 @@ gem 'rails-i18n'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capistrano'
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
   gem 'coderay', '1.1.3'
   gem 'image_processing'
   gem 'pry-doc'
@@ -46,11 +51,6 @@ group :development, :test do
   gem 'rubocop', '~> 1.24'
   gem 'rubocop-airbnb'
   gem 'rubocop-rails'
-  gem 'capistrano'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano3-unicorn'
 end
 
 group :development do
