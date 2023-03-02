@@ -43,9 +43,9 @@ group :development, :test do
   gem 'image_processing'
   gem 'pry-doc'
   gem 'pry-rails'
-  gem 'rubocop', require: false
-  gem 'rubocop-airbnb', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop', '~> 1.24'
+  gem 'rubocop-airbnb'
+  gem 'rubocop-rails'
 end
 
 group :development do
@@ -79,4 +79,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "dockerfile-rails", ">= 1.0.0", :group => :development
+gem 'dockerfile-rails', '>= 1.0.0', group: :development
