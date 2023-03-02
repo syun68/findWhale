@@ -43,6 +43,10 @@ jobs:
              bundle exec rake db:schema:load
              bundle exec rake db:seed
 
+      - run:
+          name: run rubocop
+          command: bundle exec rubocop
+
       # run tests!
       - run:
           name: yarn Install
