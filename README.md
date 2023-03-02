@@ -21,9 +21,9 @@
 * Google Maps API
 
 ## AWS構成図
-![AWS概要図](https://user-images.githubusercontent.com/101915651/221893845-e1fe1062-7b45-4f00-ad4f-9b8aaaad6a2c.png)
+![AWS概要図](https://user-images.githubusercontent.com/101915651/222487401-62eca152-ed02-4ee9-8dd1-2013b90e2c68.png)
 #### CircleCi CI/CD
-* GitHubへのPush時にRspecが自動で実施されます。
+* GitHubへのPush時にRubocopとRspecが自動で実施されます。
 
 ## 機能一覧
 * ユーザー登録
