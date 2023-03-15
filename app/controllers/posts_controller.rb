@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
+  include GuestSessionsHelper
   before_action :logged_in_user
+  before_action :guest_check, only: %i[update destroy]
 
   def index
     gon.map_key = ENV['Google_Map_API']
