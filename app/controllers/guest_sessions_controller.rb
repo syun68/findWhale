@@ -4,6 +4,7 @@ class GuestSessionsController < ApplicationController
       user.password = "hogehoge"
       user.password_confirmation = "hogehoge"
       user.name = "ゲスト"
+      user.id = 100
     end
     log_in(@user)
     flash[:notice] = "ゲストユーザーとしてログインしました"
