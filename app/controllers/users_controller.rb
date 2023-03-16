@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+  include GuestSessionsHelper
   before_action :logged_in_user, only: %i[account profile edit profile_update update]
   before_action :forbid_login_user, only: %i[new create]
+  before_action :guest_check, only: %i[profile_update update destroy]
 
   def new
     @user = User.new

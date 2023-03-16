@@ -23,7 +23,7 @@
         </div>
         <% if @current_user %>
           <div class="user_info_top">
-            <div class="title"><%= @current_user.name %></div>
+            <div class="title" id="user_name"><%= @current_user.name %></div>
             <div class="hamburger-menu">
               <input type="checkbox" id="menu-btn-check" />
               <label for="menu-btn-check" class="menu-btn">
@@ -46,6 +46,7 @@
           </div>
           <% else %>
             <div class="button" id=user_button_form">
+              <%= link_to "ゲストログイン（お試し）", :guest_login, class:"button", id:"login_button", method: :post %>
               <%= link_to "ログイン", :login, class:"button", id:"login_button" %>
               <%= link_to "登録", :new_user, class:"button", id:"register_button" %>
             </div>
