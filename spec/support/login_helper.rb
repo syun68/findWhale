@@ -8,6 +8,6 @@ module LoginHelpers
 
   def guest_login
     visit root_path
-    page.first("#login_button").click
+    page.first('#login_button').click
   end
 end
