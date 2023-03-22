@@ -46,9 +46,6 @@ _You can see this app on [AWS](http://35.76.100.10/)_
 #### CircleCi CI/CD
 * GitHubへのPush時にRubocopとRspecが自動で実施されます。
 
-#### Deploy
-* You can see this app on [AWS](http://35.76.100.10/)
-
 ## 機能一覧
 * ユーザー登録
   * 画像アップロード
