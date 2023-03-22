@@ -2,7 +2,7 @@
 
 海洋生物の写真投稿サイトです。    
 レスポンシブ対応しておりますので、スマホ・タブレットでもご覧いただけます。  
-![ホーム画面](https://user-images.githubusercontent.com/101915651/226738656-aa44bfb5-3d40-491b-966d-326b4b468ad6.mov)  
+![ホーム画面](https://user-images.githubusercontent.com/101915651/226985730-39598dbc-606d-42d5-94e0-096e12eb92ab.gif)
 _You can see this app on [AWS](http://35.76.100.10/)_
 
 ## 使用技術
@@ -66,6 +66,6 @@ _You can see this app on [AWS](http://35.76.100.10/)_
 ## 作成動機
 ホエールウォッチングで味わえる感動を共有したくて作成しました。
 
-
 ## こだわりポイント
 Google Maps APIと連携することにより、投稿場所を視覚的に見れるようにしました。
+![map](https://user-images.githubusercontent.com/101915651/226990754-8ab4c420-5b61-45ef-acbc-71e0ae335807.gif)
