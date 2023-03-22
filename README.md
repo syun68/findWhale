@@ -29,7 +29,8 @@ _You can see this app on [AWS](http://35.76.100.10/)_
 ```brewupdate```  
 ```brew install --cask docker```
 
-3. open/Applications/Docker.Applications
+3. Dockerの起動  
+```open/Applications/Docker.Applications```
 
 4. プロジェクトのclone  
 ```git clone https://github.com/syun68/findWhale.git```
