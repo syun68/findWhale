@@ -18,6 +18,7 @@ _You can see this app on [AWS](http://35.76.100.10/)_
   * S3
 * Docker/Docker-compose
 * Circle CI/CL
+* Rubocop
 * RSpec
 * Google Maps API
 
