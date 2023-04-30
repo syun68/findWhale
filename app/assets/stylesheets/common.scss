@@ -552,7 +552,7 @@ footer{
     display: block;
     margin: 1% 0;
   }
-  
+
   //トップページ
   .center h1{
     font-size: 1.2em;
@@ -610,16 +610,20 @@ footer{
 
   //投稿一覧
   #post_index{
+    width: 100%;
     display: block;
     padding: 0;
+    text-align: center;
   }
 
   .post_container{
+    margin: 2% 0;
     width: 100vw;
+    display: block;
   }
 
   #post_image_form img{
-    max-width: 96vw;
+    width: 100vw;
     height: auto;
   }
 
@@ -630,5 +634,24 @@ footer{
 
   .post_edit_img{
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width:820px) and (max-width:1430px) {
+  //投稿一覧
+  #post_index{
+    display: block;
+    text-align: center;
+  }
+
+  .post_container{
+    margin: 2% 0;
+    width: 80vw;
+    display: block;
+  }
+
+  #post_image_form img{
+    width: 80vw;
+    height: auto;
   }
 }
