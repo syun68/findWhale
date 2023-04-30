@@ -149,6 +149,10 @@ header{
   color: #007bff;
 }
 
+.menu-content ul li a:hover{
+  opacity: 0.5;
+}
+
 #menu-btn-check{
   display: none;
 }
@@ -491,6 +495,7 @@ footer{
   display: flex;
   flex-direction: row;
   border: 1px solid #333;
+  margin: 0 0 -1px;
   max-height: 100%;
 }
 
@@ -532,25 +537,16 @@ footer{
     height: auto;
   }
 
-  .header_left{
-    max-width: 40%;
-  }
-
-  .search_area{
-    text-align: center;
-  }
-
-  .search_area input{
-    margin-top: 4%;
+  .header_link_container{
+    display: block;
   }
 
   .user_info_top{
     flex-direction: column-reverse;
   }
 
-  #login_button{
-    display: block;
-    margin: 1% 0;
+  #user_name{
+    padding-right: 0;
   }
 
   //トップページ
