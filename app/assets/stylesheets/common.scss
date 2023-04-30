@@ -526,7 +526,7 @@ footer{
   justify-content: space-around;
 }
 
-@media screen and (max-width:820px) {
+@media screen and (max-width:768px) {
   //共通
   body{
     max-width: 768px;
@@ -633,7 +633,7 @@ footer{
   }
 }
 
-@media screen and (min-width:820px) and (max-width:1430px) {
+@media screen and (min-width:768px) and (max-width:1430px) {
   //投稿一覧
   #post_index{
     display: block;
