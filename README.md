@@ -3,7 +3,7 @@
 海洋生物の写真投稿サイトです。    
 レスポンシブ対応しておりますので、スマホ・タブレットでもご覧いただけます。  
 ![ホーム画面](https://user-images.githubusercontent.com/101915651/226985730-39598dbc-606d-42d5-94e0-096e12eb92ab.gif)
-_You can see this app on [AWS](http://35.76.100.10/)_
+_You can see this app on [AWS](https://find-whale.com/)_
 
 ## 使用技術
 * Ruby 3.1.2
@@ -43,7 +43,7 @@ _You can see this app on [AWS](http://35.76.100.10/)_
 ブラウザから[http://localhost:3000/](http://localhost:3000/)へアクセス
 
 ## AWS構成図
-![AWS概要図](https://user-images.githubusercontent.com/101915651/222487401-62eca152-ed02-4ee9-8dd1-2013b90e2c68.png)
+![AWS概要図](https://user-images.githubusercontent.com/101915651/236655603-234dced5-75c6-4499-8908-e95f35e4e5cb.png)
 #### CircleCi CI/CD
 * GitHubへのPush時にRubocopとRspecが自動で実施されます。
 
