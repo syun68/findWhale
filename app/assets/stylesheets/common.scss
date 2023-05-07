@@ -430,7 +430,6 @@ footer{
 .edit_setting_title{
   font-size: 30px;
   font-weight: bold;
-  width: 40%;
   padding-left: 1%;
 }
 
@@ -533,7 +532,7 @@ footer{
   }
 
   h1{
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   //ヘッダー
@@ -554,10 +553,6 @@ footer{
   }
 
   //トップページ
-  .center h1{
-    font-size: 1.2em;
-  }
-
   .slide-items{
     height: 20em;
   }
@@ -582,6 +577,14 @@ footer{
     margin-left: initial;
   }
 
+  .intro_stc p{
+    text-align: left;
+  }
+
+  .emphasize{
+    font-size: 1.1em;
+  }
+
   //アカウント作成、ログインページ
   .user_form_container{
     width: 100%;
@@ -601,6 +604,10 @@ footer{
     width: 50%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .sidebar ul li a{
+    font-size: 100%;
   }
 
   .mark{
